@@ -1,7 +1,6 @@
 {
   "title": "Fix a CrashLoopBackOff Pod",
   "description": "Troubleshoot and fix a failing Kubernetes pod.",
-  "difficulty": "intermediate",
   "details": {
     "intro": {
       "title": "Intro",
@@ -10,10 +9,20 @@
       "background": "intro/background.sh"
     },
     "steps": [
-      { "title": "Check Pod Status", "text": "step1/step.md", "verify": "step1/verify.sh" },
-      { "title": "Fix the Issue", "text": "step2/step.md", "verify": "step2/verify.sh" }
+      {
+        "title": "Check Pod Status",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      },
+      {
+        "title": "Fix the Issue",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      }
     ],
-    "finish": "finish.md"
+    "finish": {
+      "text": "finish.md"
+    }
   },
   "backend": {
     "imageid": "kubernetes-kubeadm-2nodes"
