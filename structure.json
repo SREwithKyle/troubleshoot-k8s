@@ -1,0 +1,8 @@
+{
+  "title": "100 Ways to Fail in Kubernetes",
+  "description": "Troubleshooting Failures in Kubernetes",
+  "items": [
+    { "path": "test-scenario" },
+    { "path": "image_pull_back_off"}
+  ]
+}
