@@ -1,0 +1,8 @@
+{
+  "title": "Be Comfortable with Failures in K8s",
+  "description": "Normalize, Troubleshoot and Fix K8s Errors",
+  "items": [
+    { "path": "image_pull_back_off" },
+    { "path": "test-scenario" }
+  ]
+}
