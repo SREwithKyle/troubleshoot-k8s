@@ -1,5 +1,5 @@
 {
-  "title": "Fix a CrashLoopBackOff Pod",
+  "title": "Fix a Image Pod",
   "description": "Troubleshoot and fix a failing Kubernetes pod.",
   "details": {
     "intro": {
