@@ -11,11 +11,10 @@
     "steps": [
       {
         "title": "Check Deploynent Status",
-        "text": "step1/text.md",
-        "verify": "step1/verify.sh"
+        "text": "step1/text.md"
       },
       {
-        "title": "Fix the Issue",
+        "title": "Fix CrashLoopBackOff",
         "text": "step2/text.md",
         "verify": "step2/verify.sh"
       }
