@@ -23,8 +23,8 @@
       "text": "finish.md"
     },
     "assets": {
-      "node01": [
-        {"file": "dashboard.yaml", "target": "/root", "chmod": "+w"}
+      "controlplane": [
+        {"file": "deployment.yaml", "target": "/root", "chmod": "+w"}
       ]
     }
   },
