@@ -23,7 +23,7 @@
       "text": "finish.md"
     },
     "assets": {
-      "host01": [
+      "node01": [
         {"file": "dashboard.yaml", "target": "/root", "chmod": "+w"}
       ]
     }
