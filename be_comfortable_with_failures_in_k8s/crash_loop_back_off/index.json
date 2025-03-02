@@ -23,12 +23,12 @@
       "text": "finish.md"
     },
     "assets": {
-      "controlplane": [
+      "host01": [
         {"file": "deployment.yaml", "target": "/root", "chmod": "+w"}
       ]
     }
   },
   "backend": {
-    "imageid": "kubernetes-kubeadm-2nodes"
+    "imageid": "kubernetes-kubeadm-1node"
   }
 }
