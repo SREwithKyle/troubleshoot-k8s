@@ -1,2 +1,2 @@
 alias k=kubectl
-kubectl apply -f deploy.yml
+kubectl apply -f /root/deployment.yaml

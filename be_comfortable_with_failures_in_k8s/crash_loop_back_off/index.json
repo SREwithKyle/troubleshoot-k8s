@@ -21,6 +21,11 @@
     ],
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "dashboard.yaml", "target": "/root", "chmod": "+w"}
+      ]
     }
   },
   "backend": {
