@@ -1,0 +1,20 @@
+# Use a minimal base image
+FROM golang:1.21 as builder
+
+# Set working directory
+WORKDIR /app
+
+# Copy and build the app
+COPY main.go .
+RUN go build -o app main.go
+
+# Use a smaller final image
+FROM alpine:latest
+WORKDIR /root/
+COPY --from=builder /app/app .
+
+# Ensure execution permissions
+RUN chmod +x /root/app
+
+# Correctly run the application
+CMD ["/root/app"]

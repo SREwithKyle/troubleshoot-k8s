@@ -1,0 +1,17 @@
+# Use a minimal base image
+FROM golang:1.21 as builder
+
+# Set working directory
+WORKDIR /app
+
+# Copy and build the app
+COPY main.go .
+RUN go build -o app main.go
+
+# Use a smaller final image
+FROM alpine:latest
+WORKDIR /root/
+COPY --from=builder /app/app .
+
+# Instead of running the actual app, try to execute a non-existent command
+CMD ["./non_existent_binary"]

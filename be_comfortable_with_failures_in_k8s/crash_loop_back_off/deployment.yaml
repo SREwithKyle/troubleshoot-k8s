@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crashloopbackoff-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crashloopbackoff-app
+  template:
+    metadata:
+      labels:
+        app: crashloopbackoff-app
+    spec:
+      containers:
+        - name: crashloopbackoff-app
+          image: handafew/crashloopbackoff-app:v1
+          imagePullPolicy: Always
