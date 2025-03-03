@@ -1,0 +1,34 @@
+{
+  "title": "Fix CrashLoopBackOff Error",
+  "description": "Troubleshoot a failed deployment with CrashLoopBackOff Error caused by LivenessProbes.",
+  "details": {
+    "intro": {
+      "title": "Intro",
+      "text": "intro/text.md",
+      "foreground": "intro/foreground.sh",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      {
+        "title": "Check Deploynent Status",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Fix CrashLoopBackOff",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "node01": [
+        {"file": "dashboard.yaml", "target": "/root", "chmod": "+w"}
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}

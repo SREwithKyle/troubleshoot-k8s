@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: liveness-fail
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: liveness-fail
+  template:
+    metadata:
+      labels:
+        app: liveness-fail
+    spec:
+      containers:
+        - name: liveness-fail
+          image: handafew/liveness-fail-app
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /wealth  # Wrong path! Should be /health
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            failureThreshold: 3
