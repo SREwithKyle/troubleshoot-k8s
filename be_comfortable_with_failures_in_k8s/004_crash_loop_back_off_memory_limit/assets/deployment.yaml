@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: liveness-fail
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: low-memory
+  template:
+    metadata:
+      labels:
+        app: low-memory
+    spec:
+      containers:
+        - name: low-memory
+          image: handafew/liveness-fail-app
+          resources:
+            requests:
+              memory: "4Mi"
+            limits:
+              memory: "4Mi"
