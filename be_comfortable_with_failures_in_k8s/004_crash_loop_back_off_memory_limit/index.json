@@ -1,6 +1,6 @@
 {
   "title": "Fix CrashLoopBackOff Error",
-  "description": "Troubleshoot a failed deployment with CrashLoopBackOff Error caused by LivenessProbes.",
+  "description": "Troubleshoot a failed deployment with CrashLoopBackOff Error caused by Memory Limit.",
   "details": {
     "intro": {
       "title": "Intro",
@@ -24,6 +24,15 @@
     },
     "assets": {
       "node01": [
+        {"file": "deployment.yaml", "target": "/root", "chmod": "+w"}
+      ],
+      "host01": [
+        {"file": "deployment.yaml", "target": "/root", "chmod": "+w"}
+      ],
+      "controlplane": [
+        {"file": "deployment.yaml", "target": "/root", "chmod": "+w"}
+      ],
+      "host02": [
         {"file": "deployment.yaml", "target": "/root", "chmod": "+w"}
       ]
     }
