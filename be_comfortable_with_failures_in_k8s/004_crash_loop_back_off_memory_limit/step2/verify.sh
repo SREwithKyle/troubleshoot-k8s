@@ -1,2 +1,2 @@
 #!/bin/bash
-kubectl get pods | grep liveness-fail | grep -q Running
+kubectl get pods | grep low-memory | grep -q Running
