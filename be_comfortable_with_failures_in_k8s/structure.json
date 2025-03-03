@@ -2,8 +2,10 @@
   "title": "Be Comfortable with Failures in K8s",
   "description": "Normalize, Troubleshoot and Fix Kubernetes Errors",
   "items": [
-    { "path": "image_pull_back_off" },
-    { "path": "crash_loop_back_off" },
+    { "path": "001_image_pull_back_off" },
+    { "path": "002_crash_loop_back_off" },
+    { "path": "003_crash_loop_back_off_liveness_probe" },
+    { "path": "004_crash_loop_back_off_memory_limit" },
     { "path": "test-scenario" }
   ]
 }
