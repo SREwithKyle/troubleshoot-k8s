@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oom-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oom-test
+  template:
+    metadata:
+      labels:
+        app: oom-test
+    spec:
+      containers:
+      - name: stress-container
+        image: nixery.dev/shell/stress-ng  # Correct image
+        command: ["stress-ng", "--vm", "1", "--vm-bytes", "150M", "--vm-hang", "0"]
+        resources:
+          limits:
+            memory: "100Mi"  # Set memory limit to trigger OOM
+          requests:
+            memory: "50Mi"

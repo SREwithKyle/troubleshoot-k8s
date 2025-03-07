@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: liveness-fail
+  name: low-memory
 spec:
   replicas: 1
   selector:

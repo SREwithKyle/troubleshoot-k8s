@@ -6,6 +6,7 @@
     { "path": "002_crash_loop_back_off" },
     { "path": "003_crash_loop_back_off_liveness_probe" },
     { "path": "004_crash_loop_back_off_memory_limit" },
+    { "path": "004_crash_loop_back_off_oom" },
     { "path": "test-scenario" }
   ]
 }
