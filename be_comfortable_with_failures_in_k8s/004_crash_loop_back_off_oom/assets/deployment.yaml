@@ -18,6 +18,6 @@ spec:
         command: ["stress-ng", "--vm", "1", "--vm-bytes", "150M", "--vm-hang", "0"]
         resources:
           limits:
-            memory: "100Mi"  # Set memory limit to trigger OOM
+            memory: "10Mi"  # Set memory limit to trigger OOM
           requests:
-            memory: "50Mi"
+            memory: "10Mi"
