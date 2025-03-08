@@ -1,6 +1,6 @@
 {
-  "title": "Required Node Affinity with a Non-Existent Label",
-  "description": "Troubleshoot a failed deployment with CrashLoopBackOff Error caused by Memory Limit (NEW).",
+  "title": "Troubleshoot Node Affinity Issues",
+  "description": "Investigate why a pod is failing to schedule due to node affinity constraints and fix the issue.",
   "details": {
     "intro": {
       "title": "Intro",
@@ -10,11 +10,11 @@
     },
     "steps": [
       {
-        "title": "Check Deploynent Status",
+        "title": "Check Pod Status",
         "text": "step1/text.md"
       },
       {
-        "title": "Fix CrashLoopBackOff",
+        "title": "Fix Node Affinity Issue",
         "text": "step2/text.md",
         "verify": "step2/verify.sh"
       }
@@ -23,17 +23,8 @@
       "text": "finish.md"
     },
     "assets": {
-      "node01": [
-        {"file": "deployment.yaml", "target": "/root", "chmod": "+w"}
-      ],
-      "host01": [
-        {"file": "deployment.yaml", "target": "/root", "chmod": "+w"}
-      ],
       "controlplane": [
-        {"file": "deployment.yaml", "target": "/root", "chmod": "+w"}
-      ],
-      "host02": [
-        {"file": "deployment.yaml", "target": "/root", "chmod": "+w"}
+        {"file": "pod.yaml", "target": "/root", "chmod": "+w"}
       ]
     }
   },
