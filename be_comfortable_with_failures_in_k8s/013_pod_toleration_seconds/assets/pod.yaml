@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-complex-failure
+spec:
+  nodeSelector:
+    app: "critical"  # Requires a node with this label
+
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: zone
+                operator: In
+                values:
+                  - "us-east-1a"
+
+  tolerations:
+    - key: "restricted"
+      operator: "Equal"
+      value: "true"
+      effect: "NoExecute"
+      tolerationSeconds: 20  # Allows the pod to start, but it will be evicted in 20 seconds
+
+  containers:
+    - name: nginx
+      image: nginx
