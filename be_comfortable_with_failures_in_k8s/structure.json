@@ -6,6 +6,14 @@
     { "path": "002_crash_loop_back_off" },
     { "path": "003_crash_loop_back_off_liveness_probe" },
     { "path": "004_crash_loop_back_off_oom" },
+    { "path": "005_node_selector_not_exist" },
+    { "path": "006_node_selector_no_schedule_taint" },
+    { "path": "007_node_label_removed_after_scheduling" },
+    { "path": "008_node_selector_affiniy" },
+    { "path": "009_node_cordoned" },
+    { "path": "010_node_low_weight" },
+    { "path": "011_node_taint_after_scheduling" },
+    { "path": "012_pod_toleration_seconds" },
     { "path": "test-scenario" }
   ]
 }
