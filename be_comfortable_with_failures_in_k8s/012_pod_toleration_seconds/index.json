@@ -11,7 +11,7 @@
     "steps": [
       {
         "title": "Check Pod Status and Identify Scheduling Issues",
-        "text": "step1/text.md",
+        "text": "step1/text.md"
       },
       {
         "title": "Fix the Taint Issue",
